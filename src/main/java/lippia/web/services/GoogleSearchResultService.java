@@ -2,7 +2,7 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 
-import lippia.web.constants.GoogleConstants;
+import lippia.web.constants.HomeConstants;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -10,7 +10,7 @@ import org.testng.Assert;
 public class GoogleSearchResultService extends ActionManager {
 
     private static WebElement stats() {
-        return getElement(GoogleConstants.STATS_ID);
+        return getElement(HomeConstants.STATS_ID);
     }
 
     public static String getStats() {
