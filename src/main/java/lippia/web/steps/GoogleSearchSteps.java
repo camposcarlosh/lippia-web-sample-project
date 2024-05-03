@@ -12,7 +12,7 @@ public class GoogleSearchSteps extends PageSteps {
         GoogleHomeService.navegarWeb();
     }
 
-    @Given("^The client isn't on google page$")
+    @Given("^The client is not on google page$")
     public void isNotHome() {
         GoogleHomeService.navegarWeb();
         throw new RuntimeException("the client is not on google page");
