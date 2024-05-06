@@ -3,6 +3,7 @@ package lippia.web.services;
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
 import lippia.web.constants.LoginConstants;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class LoginService extends ActionManager {
@@ -36,5 +37,13 @@ public class LoginService extends ActionManager {
         }
         System.out.println("El mensaje de error es ... " + vGetText);
         Assert.assertEquals(vGetText,mensaje, "El mensaje No coincide con " + mensaje);
+    }
+
+    public static void isInLoginPage() {
+        WebActionManager.setInput(LoginConstants.EMAIL_INPUT,"@");
+        WebElement elemento = getElement(LoginConstants.ACCOUNT_TITLE);
+        Assert.assertEquals(elemento.getText(),"Don't have an account?");
+        WebElement elemento2 = getElement(LoginConstants.SIGNUP_TITLE);
+        Assert.assertEquals(elemento2.getText(),"Sign up");
     }
 }

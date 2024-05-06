@@ -52,5 +52,9 @@ public class LoginSteps extends PageSteps {
         LoginService.ShowMessage(caso, mensaje);
     }
 
+    @Then("The client verify is in the login page")
+    public void theClientVerifyIsInTheLoginPage() {
+        LoginService.isInLoginPage();
+    }
 }
 

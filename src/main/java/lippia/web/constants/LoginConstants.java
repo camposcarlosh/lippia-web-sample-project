@@ -7,4 +7,6 @@ public class LoginConstants {
     public static final String LOGIN_BUTTON = "xpath://button[@data-test-id=\"login-button\"]";
     public static final String ERROR_MESSAGE1 = "xpath://span[@class=\"cl-invalid-feedback cl-block cl-mt-0 ng-star-inserted\"]";
     public static final String ERROR_MESSAGE2 = "xpath://span[@data-test-id=\"invalid-email\"]";
+    public static final String SIGNUP_TITLE = "xpath://a[.=\"Sign up\"]";
+    public static final String ACCOUNT_TITLE = "xpath://span[.=\"Don't have an account?\"]";
 }

@@ -1,5 +1,6 @@
 package lippia.web.constants;
 
 public class DashboardConstants {
-    public static final String PERFIL_BUTTON = "xpath://*[@id='topbar-menu']/div/div[2]/div/app-user-settings/div/a/avatar/div/span";
+    public static final String PROFILE_BUTTON = "xpath://span[.='Ca']";
+    public static final String LOGOUT_BUTTON = "xpath://a[@data-cy='logout']";
 }

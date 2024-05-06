@@ -10,4 +10,14 @@ public class DashboardSteps extends PageSteps {
     public void theClientVerifyIsInTheDashboard(String prof) {
         DashboardService.TestDash(prof);
     }
+
+    @When("The client click on profile button")
+    public void theClientClickOnProfileButton() {
+        DashboardService.clickProfileButton();
+    }
+
+    @When("The client click on close session button")
+    public void theClientClickOnCloseSessionButton() {
+        DashboardService.clickLogoutButton();
+    }
 }
