@@ -20,6 +20,15 @@ Feature: Un cliente potencial quiere logear en clockify
     When The client click on log in button
     Then The client verify is in the Enter Code Page with email "camposcarlosh@yahoo.com"
 
+  #-- Pruebo este escenario forzando que inicie en la página indicada
+  #   para ver si ese es el error
+  #   pero tampoco encuentra los elementos
+  #   TestNGSecuencialRunner.runScenario » NoSuchElement no such element: Unable to ...
+  @Login_Email @Fail
+  Scenario: Login successful with email
+    Given The client is on Enter Code Page
+    Then The client verify is in the Enter Code Page with email "camposcarlosh@yahoo.com"
+
   @LoginHabilitado @Successfull
   Scenario: button is enabled in Login Manual
     Given The client is on home page
