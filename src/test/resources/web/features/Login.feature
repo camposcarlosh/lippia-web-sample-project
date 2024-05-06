@@ -16,7 +16,6 @@ Feature: Un cliente potencial quiere logear en clockify
   Scenario: Login successful with email
     Given The client is on home page
     When The client click on log in button on landing page
-    When The client click on log in Manually button
     When The client set the email "camposcarlosh@yahoo.com"
     When The client click on log in button
     Then The client verify is in the Enter Code Page with email "camposcarlosh@yahoo.com"
