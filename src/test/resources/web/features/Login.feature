@@ -38,10 +38,10 @@ Feature: Un cliente potencial quiere logear en clockify
     When Set the email <correo>
     When Set the password <pass>
     When The client click on log in button
-    Then Show error Message: <mensaje> <caso>
+    Then Show error Message <caso> : <mensaje>
 
     Examples:
-      | correo                  | pass   | mensaje                    | causa_fallo                    | caso |
-      | camposcarlosh@yahoo.com | 12345  | La contraseña no es válida | Longitud contraseña incorrecta | 1    |
-      | camposcarloshyahoo.com  | 123456 | Email format is not valid  | Formato Correo incorrecto      | 2    |
-      | camposcarlosh@yahoocom  | 123456 | Email format is not valid  | Formato Correo incorrecto      | 2    |
+      | correo                  | pass   | mensaje                   | causa_fallo               | caso |
+      | camposcarlosh@yahoo.com | 12345  | Password is not valid     | Contraseña incorrecta     | 1    |
+      | camposcarloshyahoo.com  | 123456 | Email format is not valid | Formato Correo incorrecto | 2    |
+      | camposcarlosh@yahoocom  | 123456 | Email format is not valid | Formato Correo incorrecto | 2    |

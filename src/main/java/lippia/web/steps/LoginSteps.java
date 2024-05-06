@@ -47,9 +47,10 @@ public class LoginSteps extends PageSteps {
         LoginService.setPassword(pass);
     }
 
-    @Then("Show error Message: (.*)$ (.*)$")
-    public void ShowMessage(String mensaje, Integer caso) {
-        LoginService.ShowMessage(mensaje,caso);
+    @Then("Show error Message {} : {}")
+    public void ShowMessage(Integer caso, String mensaje) {
+        LoginService.ShowMessage(caso, mensaje);
     }
+
 }
 

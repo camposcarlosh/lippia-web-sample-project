@@ -27,19 +27,14 @@ public class LoginService extends ActionManager {
         Assert.assertTrue(elemento, "El botón no esta habilitado" );
     }
 
-    public static void ShowMessage(String mensaje, Integer caso) {
+    public static void ShowMessage(Integer caso, String mensaje) {
+        String vGetText;
         if (caso == 1 ) {
-
-            String vGetText = WebActionManager.getElement(LoginConstants.ERROR_MESSAGE1).getText();
-            System.out.println("El mensaje de error es ... " + vGetText);
-            Assert.assertEquals(vGetText,mensaje, "El mensaje No coincide con " + mensaje);
-
+            vGetText = WebActionManager.getElement(LoginConstants.ERROR_MESSAGE1).getText();
         } else {
-
-            String vGetText = WebActionManager.getElement(LoginConstants.ERROR_MESSAGE2).getText();
-            System.out.println("El mensaje de error es ... " + vGetText);
-            Assert.assertEquals(vGetText,mensaje, "El mensaje No coincide con " + mensaje);
-
+            vGetText = WebActionManager.getElement(LoginConstants.ERROR_MESSAGE2).getText();
         }
+        System.out.println("El mensaje de error es ... " + vGetText);
+        Assert.assertEquals(vGetText,mensaje, "El mensaje No coincide con " + mensaje);
     }
 }
