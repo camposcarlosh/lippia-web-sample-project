@@ -1,13 +1,9 @@
 package lippia.web.services;
 
-import com.crowdar.core.PropertyManager;
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
-import lippia.web.constants.HomeConstants;
 import lippia.web.constants.LoginConstants;
-
-import static com.crowdar.core.actions.WebActionManager.navigateTo;
-import static lippia.web.constants.LoginConstants.LOGIN_MANUALLY_BUTTON;
+import org.testng.Assert;
 
 public class LoginService extends ActionManager {
 
@@ -24,5 +20,26 @@ public class LoginService extends ActionManager {
 
     public static void clicLogInButton() {
         WebActionManager.click(LoginConstants.LOGIN_BUTTON);
+    }
+
+    public static void EnableLogInButton() {
+        boolean elemento = WebActionManager.isEnabled(LoginConstants.LOGIN_BUTTON);
+        Assert.assertTrue(elemento, "El botón no esta habilitado" );
+    }
+
+    public static void ShowMessage(String mensaje, Integer caso) {
+        if (caso == 1 ) {
+
+            String vGetText = WebActionManager.getElement(LoginConstants.ERROR_MESSAGE1).getText();
+            System.out.println("El mensaje de error es ... " + vGetText);
+            Assert.assertEquals(vGetText,mensaje, "El mensaje No coincide con " + mensaje);
+
+        } else {
+
+            String vGetText = WebActionManager.getElement(LoginConstants.ERROR_MESSAGE2).getText();
+            System.out.println("El mensaje de error es ... " + vGetText);
+            Assert.assertEquals(vGetText,mensaje, "El mensaje No coincide con " + mensaje);
+
+        }
     }
 }

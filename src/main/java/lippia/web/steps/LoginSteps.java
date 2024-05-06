@@ -31,4 +31,25 @@ public class LoginSteps extends PageSteps {
     public void theClientClickOnLogInButton() {
         LoginService.clicLogInButton();
     }
+
+    @Then("the 'Iniciar Sesión' button is enabled")
+    public void theLogInButtonisEnabled() {
+        LoginService.EnableLogInButton();
+    }
+
+    @When("Set the email (.*)$")
+    public void setTheEmail(String mail) {
+        LoginService.setEmail(mail);
+    }
+
+    @When("Set the password (.*)$")
+    public void setThePassword(String pass) {
+        LoginService.setPassword(pass);
+    }
+
+    @Then("Show error Message: (.*)$ (.*)$")
+    public void ShowMessage(String mensaje, Integer caso) {
+        LoginService.ShowMessage(mensaje,caso);
+    }
 }
+
