@@ -2,6 +2,7 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
+import lippia.web.constants.Enter_CodeConstants;
 import lippia.web.constants.LoginConstants;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -40,7 +41,7 @@ public class LoginService extends ActionManager {
     }
 
     public static void isInLoginPage() {
-        WebActionManager.setInput(LoginConstants.EMAIL_INPUT,"@");
+        WebActionManager.waitVisibility(LoginConstants.ACCOUNT_TITLE);
         WebElement elemento = getElement(LoginConstants.ACCOUNT_TITLE);
         Assert.assertEquals(elemento.getText(),"Don't have an account?");
         WebElement elemento2 = getElement(LoginConstants.SIGNUP_TITLE);

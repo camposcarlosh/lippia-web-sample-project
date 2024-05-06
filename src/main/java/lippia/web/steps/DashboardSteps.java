@@ -20,4 +20,5 @@ public class DashboardSteps extends PageSteps {
     public void theClientClickOnCloseSessionButton() {
         DashboardService.clickLogoutButton();
     }
+
 }

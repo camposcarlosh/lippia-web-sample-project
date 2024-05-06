@@ -1,7 +1,7 @@
 @Logout
 Feature: Un cliente quiere desloguearse de clockify
 
-  @Successfull @Do
+  @Successfull
   Scenario: Logout successful
     Given The client is on home page
     When The client click on log in button on landing page

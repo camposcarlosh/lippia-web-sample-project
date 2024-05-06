@@ -11,8 +11,7 @@ Feature: Un cliente potencial quiere logear en clockify
     When The client click on log in button
     Then The client verify is in the Dashboard with profile "CA"
 
-
-  @Login_Email @Fail
+  @Login_Email @Successfull
   Scenario: Login successful with email
     Given The client is on home page
     When The client click on log in button on landing page
@@ -20,14 +19,17 @@ Feature: Un cliente potencial quiere logear en clockify
     When The client click on log in button
     Then The client verify is in the Enter Code Page with email "camposcarlosh@yahoo.com"
 
-  #-- Pruebo este escenario forzando que inicie en la página indicada
-  #   para ver si ese es el error
-  #   pero tampoco encuentra los elementos
-  #   TestNGSecuencialRunner.runScenario » NoSuchElement no such element: Unable to ...
-  @Login_Email @Fail
-  Scenario: Login successful with email
-    Given The client is on Enter Code Page
-    Then The client verify is in the Enter Code Page with email "camposcarlosh@yahoo.com"
+  @CheckCodeFallido @Successfull
+  Scenario Outline: Email login failed for <causa_fallo>
+    Given The client is on verify code page with mail <email>
+    When The client set the code <cod1>-<cod2>-<cod3>-<cod4>-<cod5>-<cod6> that recived for email
+    Then Show error Message: "You've maxed out your attempts. Check your email to proceed."
+
+    Examples:
+      | email                   | cod1 | cod2 | cod3 | cod4 | cod5 | cod6 | causa_fall        |
+      | camposcarlosh@yahoo.com | 1    | 2    | 3    | 4    | 5    |      | Código incorrecto |
+      | camposcarlosh@yahoo.com | A    | 3    | 5    | 8    | B    | C    | Código Vencido    |
+
 
   @LoginHabilitado @Successfull
   Scenario: button is enabled in Login Manual
