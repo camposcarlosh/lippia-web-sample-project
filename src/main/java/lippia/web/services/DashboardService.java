@@ -26,4 +26,21 @@ public class DashboardService extends ActionManager {
     public static void clickLogoutButton() {
         WebActionManager.click(DashboardConstants.LOGOUT_BUTTON);
     }
+
+    public static void clickWorkspaceActiveButton(String name) {
+        System.out.println("PASO POR ... WorkspaceActiveButton");
+        WebActionManager.waitPresence(DashboardConstants.ACTIVE_BUTTON);
+        WebActionManager.click(DashboardConstants.ACTIVE_BUTTON);
+    }
+
+    public static void clickManageButton() {
+        System.out.println("PASO POR ... theClientClickOnManageButton");
+        WebActionManager.waitPresence(DashboardConstants.MANAGE_BUTTON);
+        WebActionManager.click(DashboardConstants.MANAGE_BUTTON);
+    }
+
+    public static void clickProjectButton() {
+        WebActionManager.waitPresence(DashboardConstants.PROJECT_BUTTON);
+        WebActionManager.click(DashboardConstants.PROJECT_BUTTON);
+    }
 }
