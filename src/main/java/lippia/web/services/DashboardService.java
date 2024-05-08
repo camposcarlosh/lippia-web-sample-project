@@ -29,18 +29,24 @@ public class DashboardService extends ActionManager {
 
     public static void clickWorkspaceActiveButton(String name) {
         System.out.println("PASO POR ... WorkspaceActiveButton");
-        WebActionManager.waitPresence(DashboardConstants.ACTIVE_BUTTON);
-        WebActionManager.click(DashboardConstants.ACTIVE_BUTTON);
+        WebActionManager.waitPresence(DashboardConstants.NO_THANKS);
+        WebActionManager.getElement(DashboardConstants.NO_THANKS).click();
+        System.out.println("PASO POR ... No GRACIAS");
+        WebActionManager.getElement(DashboardConstants.ACTIVE_BUTTON).click();
+        //WebActionManager.click(DashboardConstants.ACTIVE_BUTTON);
+
     }
 
     public static void clickManageButton() {
-        System.out.println("PASO POR ... theClientClickOnManageButton");
         WebActionManager.waitPresence(DashboardConstants.MANAGE_BUTTON);
-        WebActionManager.click(DashboardConstants.MANAGE_BUTTON);
+        WebActionManager.getElement(DashboardConstants.MANAGE_BUTTON).click();
+        System.out.println("PASO POR ... theClientClickOnManageButton");
+        //WebActionManager.click(DashboardConstants.MANAGE_BUTTON);
     }
 
     public static void clickProjectButton() {
         WebActionManager.waitPresence(DashboardConstants.PROJECT_BUTTON);
-        WebActionManager.click(DashboardConstants.PROJECT_BUTTON);
+        WebActionManager.getElement(DashboardConstants.PROJECT_BUTTON).click();
+        //WebActionManager.click(DashboardConstants.PROJECT_BUTTON);
     }
 }

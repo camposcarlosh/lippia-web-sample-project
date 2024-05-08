@@ -10,8 +10,7 @@ public class ProjectService extends ActionManager {
     public static void clickCreateNewButton() {
         WebActionManager.setInput(ProjectConstants.FIND_IMPUT,"lala");
         WebActionManager.waitPresence(ProjectConstants.NEW_BUTTON);
-        WebActionManager.click(ProjectConstants.NEW_BUTTON);
-        WebActionManager.setInput(ProjectConstants.NAME_INPUT,"lala");
+        WebActionManager.getElement(ProjectConstants.NEW_BUTTON).click();
     }
 
     public static void setProjectName(String proy) {

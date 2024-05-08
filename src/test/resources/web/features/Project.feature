@@ -1,7 +1,7 @@
 @Project
 Feature: Un cliente quiere crear un proyecto
 
-  @NewProject @Do
+  @NewProject @Doeee
   Scenario: Create a new project
     Given The client is on Dashboard page logged with email "camposcarlosh@yahoo.com" and password "123456+"
     When The client click on project button
