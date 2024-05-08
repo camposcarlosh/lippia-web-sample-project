@@ -33,9 +33,9 @@ public class DashboardSteps extends PageSteps {
         LoginService.clicLogInButton();
     }
 
-    @When("The client click on workspace active button {string}")
-    public void theClientClickOnWorkspaceActiveButton(String name) {
-        DashboardService.clickWorkspaceActiveButton(name);
+    @When("The client click on workspace active button")
+    public void theClientClickOnWorkspaceActiveButton() {
+        DashboardService.clickWorkspaceActiveButton();
     }
 
     @When("The client click on manage button")

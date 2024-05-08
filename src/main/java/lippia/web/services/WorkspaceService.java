@@ -2,8 +2,6 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
-import lippia.web.constants.Enter_CodeConstants;
-import lippia.web.constants.LoginConstants;
 import lippia.web.constants.WorkspaceConstants;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -43,7 +41,6 @@ public class WorkspaceService extends ActionManager {
         WebElement elemento = getElement(WSNAME_TEXT);
         String textoGrilla;
         textoGrilla = elemento.getText();
-        /////ESTO NO FUNCIONA!!!! NO ENCUENTRA EL WS CREADO EN LA GRILLA
         boolean encuentra = false;
         if (textoGrilla.contains(workspace)) {
             encuentra = true;
