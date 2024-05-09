@@ -18,9 +18,9 @@ public class Enter_CodeSteps extends PageSteps {
         Enter_CodeService.NavegarWeb(email);
     }
 
-    @When("The client set the code {}-{}-{}-{}-{}-{} that recived for email")
-    public void theClientSetTheCodeThatRecivedForEmail(String cod1, String cod2, String cod3, String cod4, String cod5, String cod6) {
-        Enter_CodeService.InputCode(cod1, cod2, cod3, cod4, cod5, cod6);
+    @When("The client set the code {} that recived for email")
+    public void theClientSetTheCode(String cod) {
+        Enter_CodeService.InputCode(cod);
     }
 
     @Then("Show error Message: {string}")

@@ -20,16 +20,15 @@ Feature: Un cliente potencial quiere logear en clockify
     Then The client verify is in the Enter Code Page with email "camposcarlosh@yahoo.com"
 
   @CheckCodeFallido @Successfull
-  Scenario Outline: Email login failed for <causa_fallo>
+  Scenario Outline: Email login failed for <causa>
     Given The client is on verify code page with mail <email>
-    When The client set the code <cod1>-<cod2>-<cod3>-<cod4>-<cod5>-<cod6> that recived for email
+    When The client set the code <cod> that recived for email
     Then Show error Message: "You've maxed out your attempts. Check your email to proceed."
 
     Examples:
-      | email                   | cod1 | cod2 | cod3 | cod4 | cod5 | cod6 | causa_fall        |
-      | camposcarlosh@yahoo.com | 1    | 2    | 3    | 4    | 5    |      | Código incorrecto |
-      | camposcarlosh@yahoo.com | A    | 3    | 5    | 8    | B    | C    | Código Vencido    |
-
+      | email                   | cod    | causa             |  |  |  |  |  |
+      | camposcarlosh@yahoo.com | 123456 | Código incorrecto |  |  |  |  |  |
+      | camposcarlosh@yahoo.com | 2HG3ZE | Código Vencido    |  |  |  |  |  |
 
   @LoginHabilitado @Successfull
   Scenario: button is enabled in Login Manual
