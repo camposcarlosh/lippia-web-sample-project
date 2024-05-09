@@ -10,5 +10,6 @@ public class DashboardConstants {
     //public static final String MANAGE_BUTTON = "xpath://a[@data-testid=\"manage-workspaces-link\"]";
     public static final String NO_THANKS = "xpath://a[contains( text(), 'No, thanks')]";
    //public static final String MANAGE_BUTTON = "xpath://a[contains( text(), 'Manage')]";
-    public static final String PROJECT_BUTTON = "xpath://img[@alt=\"View Projects\"] ";
+    public static final String PROJECT_BUTTON = "xpath://img[@alt=\"View Projects\"]";
+    public static final String CONFIG_BUTTON = "xpath://img[@alt=\"Settings icon\"]";
 }

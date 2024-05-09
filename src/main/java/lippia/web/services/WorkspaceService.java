@@ -2,6 +2,7 @@ package lippia.web.services;
 
 import com.crowdar.core.actions.ActionManager;
 import com.crowdar.core.actions.WebActionManager;
+import lippia.web.constants.DashboardConstants;
 import lippia.web.constants.WorkspaceConstants;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -45,7 +46,7 @@ public class WorkspaceService extends ActionManager {
         if (textoGrilla.contains(workspace)) {
             encuentra = true;
         }
-      //  boolean encuentra = textoGrilla.contains(workspace);
+        System.out.println("PASO POR ... ENCUENTRA = " + encuentra);
         Assert.assertTrue(encuentra, "El workspace credo no existe");
     }
 
@@ -56,5 +57,21 @@ public class WorkspaceService extends ActionManager {
 
     public static void setWsName(String workspace) {
         WebActionManager.setInput(WorkspaceConstants.WORKSPACE_INPUT,workspace);
+    }
+
+    public static void clickUpgradeButton() {
+        WebActionManager.waitPresence(WorkspaceConstants.UPGRADE_BUTTON);
+        WebActionManager.getElement(WorkspaceConstants.UPGRADE_BUTTON).click();
+    }
+
+    public static String setNewName() {
+        LocalDateTime fechaHoraActual = LocalDateTime.now();
+        // Formatear la fecha y hora
+        String workspaceName = "WS_" + fechaHoraActual.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
+        WebActionManager.waitPresence(WorkspaceConstants.NAME_INPUT);
+        WebActionManager.getElement(WorkspaceConstants.NAME_INPUT).click();
+        WebActionManager.setInput(WorkspaceConstants.NAME_INPUT,workspaceName);
+        System.out.println("PASO POR ... setWorkspaceName = " + workspaceName);
+        return workspaceName;
     }
 }

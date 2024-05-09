@@ -4,6 +4,7 @@ import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import lippia.web.services.DashboardService;
 import lippia.web.services.WorkspaceService;
 
 public class WorkspaceSteps extends PageSteps {
@@ -32,5 +33,15 @@ public class WorkspaceSteps extends PageSteps {
     @When("The app refresh the page")
     public void theAppRefreshThePage() {
         WorkspaceService.refreshPage();
+    }
+
+    @When("The client click on upgrade button")
+    public void theClientClickOnUpgradeButton() {
+        WorkspaceService.clickUpgradeButton();
+    }
+
+    @When("The client input workspace new name with day and hour")
+    public void theClientInputWorkspaceNewNameWithDayAndHour() {
+        workspace = WorkspaceService.setNewName();
     }
 }

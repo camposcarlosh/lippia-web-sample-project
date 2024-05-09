@@ -47,4 +47,9 @@ public class DashboardSteps extends PageSteps {
     public void theClientClickOnProjectButton() {
         DashboardService.clickProjectButton();
     }
+
+    @When("The client click on config button")
+    public void theClientClickOnConfigButton()  {
+        DashboardService.clickConfigButton();
+    }
 }
