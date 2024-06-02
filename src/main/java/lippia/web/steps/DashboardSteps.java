@@ -8,21 +8,6 @@ import lippia.web.services.LoginService;
 
 public class DashboardSteps extends PageSteps {
 
-    @Then("The client verify is in the Dashboard with profile {string}")
-    public void theClientVerifyIsInTheDashboard(String prof) {
-        DashboardService.TestDash(prof);
-    }
-
-    @When("The client click on profile button")
-    public void theClientClickOnProfileButton() {
-        DashboardService.clickProfileButton();
-    }
-
-    @When("The client click on close session button")
-    public void theClientClickOnCloseSessionButton() {
-        DashboardService.clickLogoutButton();
-    }
-
     @Given("The client is on Dashboard page logged with email {string} and password {string}")
     public void theClientIsOnWorkspacePage(String mail, String pass) {
         HomeService.navegarWeb();
@@ -33,23 +18,8 @@ public class DashboardSteps extends PageSteps {
         LoginService.clicLogInButton();
     }
 
-    @When("The client click on workspace active button")
-    public void theClientClickOnWorkspaceActiveButton() {
-        DashboardService.clickWorkspaceActiveButton();
-    }
-
-    @When("The client click on manage button")
-    public void theClientClickOnManageButton() {
-        DashboardService.clickManageButton();
-    }
-
-    @When("The client click on project button")
-    public void theClientClickOnProjectButton() {
-        DashboardService.clickProjectButton();
-    }
-
-    @When("The client click on config button")
-    public void theClientClickOnConfigButton()  {
-        DashboardService.clickConfigButton();
+    @When("The client click on tracker button")
+    public void theClientClickOnTrackerButton() {
+        DashboardService.clickTrackerButton();
     }
 }

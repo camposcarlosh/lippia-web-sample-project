@@ -12,4 +12,5 @@ public class DashboardConstants {
    //public static final String MANAGE_BUTTON = "xpath://a[contains( text(), 'Manage')]";
     public static final String PROJECT_BUTTON = "xpath://img[@alt=\"View Projects\"]";
     public static final String CONFIG_BUTTON = "xpath://img[@alt=\"Settings icon\"]";
+    public static final String TRACK_BUTTON = "xpath://Img[@alt=\"View Time tracker\"]";
 }

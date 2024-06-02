@@ -54,4 +54,9 @@ public class DashboardService extends ActionManager {
         WebActionManager.waitPresence(DashboardConstants.CONFIG_BUTTON);
         WebActionManager.getElement(DashboardConstants.CONFIG_BUTTON).click();
     }
+
+    public static void clickTrackerButton() {
+        WebActionManager.waitPresence(DashboardConstants.TRACK_BUTTON);
+        WebActionManager.getElement(DashboardConstants.TRACK_BUTTON).click();
+    }
 }
