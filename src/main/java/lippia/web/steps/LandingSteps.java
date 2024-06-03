@@ -2,13 +2,13 @@ package lippia.web.steps;
 
 import com.crowdar.core.PageSteps;
 import io.cucumber.java.en.*;
-import lippia.web.services.DashboardService;
+import lippia.web.services.LandingService;
 import lippia.web.services.HomeService;
 import lippia.web.services.LoginService;
 
-public class DashboardSteps extends PageSteps {
+public class LandingSteps extends PageSteps {
 
-    @Given("The client is on Dashboard page logged with email {string} and password {string}")
+    @Given("The client is on tracker page logged with email {string} and password {string}")
     public void theClientIsOnWorkspacePage(String mail, String pass) {
         HomeService.navegarWeb();
         HomeService.clickLogin();
@@ -16,10 +16,6 @@ public class DashboardSteps extends PageSteps {
         LoginService.setEmail(mail);
         LoginService.setPassword(pass);
         LoginService.clicLogInButton();
-    }
-
-    @When("The client click on tracker button")
-    public void theClientClickOnTrackerButton() {
-        DashboardService.clickTrackerButton();
+        LandingService.clickTrackerButton();
     }
 }

@@ -12,4 +12,14 @@ public class TrackerConstants {
     public static final String HORAINI_INPUT = "xpath:(//input[@autocomplete='off'])[2]";
     public static final String HORAFIN_INPUT = "xpath:(//input[@autocomplete='off'])[3]";
     public static final String FECHA_INPUT = "xpath:(//input[@autocomplete='off'])[4]";
+    public static final String DESCRIPT_GRILLA = "xpath:(//input[@type='text'])[2]";
+    public static final String HORAINI_GRILLA = "xpath:(//input[@autocomplete='off'])[3]";
+    public static final String HORAFIN_GRILLA = "xpath:(//input[@autocomplete='off'])[4]";
+    public static final String FACTURABLE_GRILLA = "xpath:(//span[contains(.,'$')])[2]";
+    public static final String PROJECT_OPTION = "xpath:(//img[@alt='assets/ui-icons/plus-blue.svg'])[2]";
+    public static final String PROJECT_INPUT = "xpath://input[@placeholder='Search project or client']";
+    public static final String PROJECT_CREATE = "xpath://a[@class='cl-text-break']";
+    public static final String TAG_OPTION = "xpath:(//img[@class='tag-icon'])[2]";
+    public static final String TAG_INPUT = "xpath://input[@placeholder='Add/Search tags']";
+    public static final String TAG_CREATE = "xpath://a[@class='cl-color-blue']";
 }
