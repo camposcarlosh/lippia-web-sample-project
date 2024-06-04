@@ -53,7 +53,7 @@ public class TrackerService extends ActionManager {
         MainService.esperar(5);
         boolean encuentra = false;
         try {
-            String TAREA = "xpath://div[contains( text(),'" + descTimeEntry + "')]";
+            String TAREA = String.format(TrackerConstants.TAREA_VARIABLE, descTimeEntry);
             Point Location = WebActionManager.getElement(TAREA).getLocation();
             encuentra = true;
             System.out.println("Se encontró la tarea: " + descTimeEntry + " en la grilla");

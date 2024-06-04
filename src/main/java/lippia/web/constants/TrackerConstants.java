@@ -22,4 +22,5 @@ public class TrackerConstants {
     public static final String TAG_OPTION = "xpath:(//img[@class='tag-icon'])[2]";
     public static final String TAG_INPUT = "xpath://input[@placeholder='Add/Search tags']";
     public static final String TAG_CREATE = "xpath://a[@class='cl-color-blue']";
+    public static final String TAREA_VARIABLE = "xpath://div[contains(text(),'%s')]";
 }
